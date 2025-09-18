@@ -1,0 +1,177 @@
+septimo-sentido-web/
+├─ index.html
+├─ css/
+│  └─ styles.css
+├─ js/
+│  └─ main.js
+└─ assets/
+   └─ (imágenes, logo, fotos…)
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Séptimo Sentido — Animación · Eventos · Turismo</title>
+  <meta name="description" content="Animación recreativa profesional para eventos: Bingo Millonario, Sweet Party, Neón Party y más. Reserva ya." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"><img src="assets/logo.png" alt="Séptimo Sentido" /></a>
+      <nav class="main-nav" id="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto" class="btn-cta">Cotizar</a>
+      </nav>
+      <button id="burger" class="burger" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="container hero-content">
+          <h1>Animación Recreativa Profesional</h1>
+          <p>Shows, animación, DJ, luces y diversión para todo tipo de eventos — Bogotá y alrededores.</p>
+          <div class="cta-row">
+            <a class="btn-primary" href="#contacto">Cotiza tu evento</a>
+            <a class="btn-secondary" href="#precios">Ver precios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS / PORTAFOLIO -->
+    <section id="servicios" class="container section">
+      <h2>Programas destacados</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <img src="assets/fotos/bingo.jpg" alt="Bingo Millonario" />
+          <h3>Bingo Millonario</h3>
+          <p>Animación completa, balotera, DJ, concursos y premios — ideal para empresas y familias.</p>
+          <a href="#precios" class="small-btn">Ver detalles</a>
+        </article>
+
+        <article class="card">
+          <img src="assets/fotos/sweetparty.jpg" alt="Sweet Party" />
+          <h3>Sweet Party / Infantil</h3>
+          <p>Shows interactivos, ludoteca, manualidades y actividades por rangos de edad.</p>
+          <a href="#precios" class="small-btn">Ver detalles</a>
+        </article>
+
+        <article class="card">
+          <img src="assets/fotos/neon.jpg" alt="Neón Party" />
+          <h3>Neón Party</h3>
+          <p>Escenografía neón, luces audiorrítmicas, maquillaje UV y mucha energía para fiestas.</p>
+          <a href="#precios" class="small-btn">Ver detalles</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios" class="container section">
+      <h2>Tarifas (Bogotá)</h2>
+      <div class="pricing-table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>TIEMPO</th>
+              <th>JORNADA</th>
+              <th>AFORO</th>
+              <th>VALOR 1 Animador</th>
+              <th>VALOR 1 Animador + 1 Apoyo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 a 2 Horas</td>
+              <td>Diurno</td>
+              <td>30</td>
+              <td>$350.000</td>
+              <td>$480.000</td>
+            </tr>
+            <tr>
+              <td>1 a 2 Horas</td>
+              <td>Nocturno</td>
+              <td>30</td>
+              <td>$450.000</td>
+              <td>$580.000</td>
+            </tr>
+            <tr>
+              <td>3 a 4 Horas</td>
+              <td>Diurno</td>
+              <td>30</td>
+              <td>$500.000</td>
+              <td>$650.000</td>
+            </tr>
+            <tr>
+              <td>3 a 4 Horas</td>
+              <td>Nocturno</td>
+              <td>30</td>
+              <td>$600.000</td>
+              <td>$750.000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">Fuera de Bogotá tiene un incremento según lugar. Para aforo > 50 personas se requiere sonido y micrófono inalámbrico.</p>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="container section">
+      <h2>Galería</h2>
+      <div class="gallery-grid">
+        <img src="assets/fotos/evento1.jpg" alt="">
+        <img src="assets/fotos/evento2.jpg" alt="">
+        <img src="assets/fotos/evento3.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- CONTACTO (Netlify form) -->
+    <section id="contacto" class="container section contact-section">
+      <h2>Reserva y cotiza</h2>
+
+      <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+        <input type="hidden" name="form-name" value="contacto">
+        <p class="hidden"><label>Si eres humano deja esto en blanco: <input name="bot-field"></label></p>
+
+        <label>Nombre completo<input type="text" name="name" required></label>
+        <label>Correo electrónico<input type="email" name="email" required></label>
+        <label>Teléfono<input type="tel" name="phone"></label>
+        <label>Tipo de evento
+          <select name="evento">
+            <option>Bingo Millonario</option>
+            <option>Sweet Party</option>
+            <option>Neón Party</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Fecha del evento<input type="date" name="fecha"></label>
+        <label>Invitados aproximados<input type="number" name="invitados" min="1"></label>
+        <label>Mensaje<textarea name="message"></textarea></label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Enviar cotización</button>
+          <a class="btn-whatsapp" href="https://wa.me/573013962036?text=Hola%20quiero%20cotizar%20un%20evento" target="_blank" rel="noopener">📲 WhatsApp</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>Séptimo Sentido</strong> — Animación · Eventos · Turismo</div>
+      <div class="socials">
+        <a href="https://facebook.com/septimosentido" target="_blank">Facebook</a>
+        <a href="https://instagram.com/septimosentidooficial" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
